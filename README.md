@@ -76,7 +76,7 @@ screen ./auto.sh
 
 ###  Telegram channel:
 
-# [Titanteam](https://telegram.me/TeM_AMIR)
+# [TeM_AMIR](https://telegram.me/TeM_AMIR)
 
 
 
