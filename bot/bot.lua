@@ -78,21 +78,18 @@ function create_config( )
 		"write",
 		"addkick"	
 	},
-    sudo_users = {267785153},
+    sudo_users = {340026281},
     admins = {},
     disabled_channels = {},
     moderation = {data = './data/moderation.json'},
-    info_text = [[》parsol v.2
+    info_text = [[》AMIR V.1
 
 
-》https://github.com/mohammadrezatitan/parsol
+》https://github.com/amiralipor/amir.git
 
 》Admins :
-》@mohammadrezajiji 《
+》@Professortelegram 《
 		
-》Special thanks to :
-》@BeyondTeam《
-》@luaerror
 ]],
   }
 	serialize_to_file(config, './data/config.lua')
