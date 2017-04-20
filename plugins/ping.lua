@@ -1,6 +1,6 @@
-﻿--start by edit by @mohammadrezajiii
+﻿--start by edit by @Professortelegram
 local datebase = {
-  "  من انلاینم و تمام پیام های گروه رو برسی میکنم😐❤️ ",
+  "  ♻️This Is a Online♻️ ",
 
   }
 local function run(msg, matches) 
@@ -9,9 +9,10 @@ end
 return {
   patterns = {
     "^(انلاینی)",
+"^(روشنی)",
   },
   run = run
 }
 
---end by edit by @mohammadrezajiii
+--end by edit by @Professortelegram
 --Channel 

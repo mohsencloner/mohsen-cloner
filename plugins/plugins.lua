@@ -20,18 +20,18 @@ local function plugin_exists( name )
 end
 
 local function list_all_plugins(only_enabled, msg)
-  local tmp = '\n\n@titantims'
+  local tmp = '\n'
   local text = ''
   local nsum = 0
   for k, v in pairs( plugins_names( )) do
-    --  ✔ enabled, ❌ disabled
-    local status = '|✖️|>'
+    --  ✔ enabled, 🚫 disabled
+    local status = '❌️'
     nsum = nsum+1
     nact = 0
     -- Check if is enabled
     for k2, v2 in pairs(_config.enabled_plugins) do
       if v == v2..'.lua' then 
-        status = '|✔|>'
+        status = '✔'
       end
       nact = nact+1
     end
@@ -41,7 +41,7 @@ local function list_all_plugins(only_enabled, msg)
       text = text..nsum..'.'..status..' '..v..' \n'
     end
   end
-  text = '<code>'..text..'</code>\n\n'..nsum..' <b>📂plugins installed</b>\n\n'..nact..' <i>✔️plugins enabled</i>\n\n'..nsum-nact..' <i>❌plugins disabled</i>'..tmp
+  text = 
   tdcli.sendMessage(msg.to.id, msg.id_, 1, text, 1, 'html')
 end
 
@@ -66,7 +66,7 @@ local function list_plugins(only_enabled, msg)
      -- text = text..v..'  '..status..'\n'
     end
   end
-  text = "\n_🔃All Plugins Reloaded_\n\n"..nact.." *✔️Plugins Enabled*\n"..nsum.." *📂Plugins Installed*\n\n@titantims"
+  text = "\n_♻️پلاگین ها بروزرسانی شدند♻️_\n\n🔵 پلاگین های فعال >*️"..nact.."*\n\n🔵  پلاگین های نصب شده >*"..nsum.."* \n"
   tdcli.sendMessage(msg.to.id, msg.id_, 1, text, 1, 'md')
 end
 
@@ -239,4 +239,3 @@ return {
 
 end
 
---@titantims
