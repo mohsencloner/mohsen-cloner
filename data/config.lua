@@ -14,7 +14,6 @@ do local _ = {
     "nerkh",
     "pic",
     "ping",
-    "time1",
     "write",
     "addkick"
   },
