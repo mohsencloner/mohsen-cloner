@@ -4,6 +4,7 @@ do local _ = {
   enabled_plugins = {
     "banhammer",
     "groupmanager",
+    "autodelcache",
     "msg-checks",
     "plugins",
     "tools",
