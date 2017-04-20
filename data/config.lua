@@ -13,6 +13,7 @@ do local _ = {
     "del",
     "nerkh",
     "pic",
+    "time",
     "ping",
     "write",
     "addkick"
