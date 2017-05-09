@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cd $HOME/jenis.ir
+cd $HOME/amir.ir
 
 install() {
 	    cd tg
