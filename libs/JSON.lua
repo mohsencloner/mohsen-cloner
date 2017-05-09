@@ -1050,4 +1050,10 @@ return OBJDEF:new()
 --   20100810.2    added some checking to ensure that an invalid Unicode character couldn't leak in to the UTF-8 encoding
 --
 --   20100731.1    initial public release
---@titantims
+--
+
+-- کد های پایین در ربات نشان داده نمیشوند
+-- http://permag.ir
+-- @permag_ir
+-- @permag_bots
+-- @permag
