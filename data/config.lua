@@ -3,27 +3,39 @@ do local _ = {
   disabled_channels = {},
   enabled_plugins = {
     "banhammer",
-    "groupmanager",
-    "autodelcache",
     "msg-checks",
     "plugins",
     "tools",
     "fun",
-    "info",
+    "groupmanager-fa",
     "del",
-    "nerkh",
-    "pic",
-    "time",
-    "ping",
+    "banhammer-fa",
+    "Date",
+    "FontFarsi",
+    "fwid",
+    "getprof",
+    "magam",
+    "me",
+    "lock-fosh",
+    "mute-time",
+    "poker",
+    "report",
     "write",
-    "addkick"
+    "autodelcache"
   },
-  info_text = "》AMIR V.1\n\n\n》://github.com/amiralipor/amir.git\n\n》Admins :\n》@Professortelegram 《\n\9\9\n》\n",
+  info_text = "@TeleSuperiorTm\n",
   moderation = {
     data = "./data/moderation.json"
   },
   sudo_users = {
-    340026281
+    340026281,
+    296222607,
+    205593961,
+    292514805,
+    285512862,
+    189119166,
+    181744239,
+    69413635
   }
 }
 return _
