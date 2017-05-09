@@ -30,7 +30,7 @@
 <h6 dir="rtl"></h6>
 <pre>
 <span>cd $HOME</span>
-<span>git clone https://github.com/amiralipor/amir.git</span>
+<span>git clone https://github.com/Telesuperior/amir.git</span>
 <span>cd amir</span>
 <span>chmod +x amir.sh</span>
 <span>./amir.sh install</span>
@@ -39,7 +39,7 @@
 <br></h4>
 <h6 dir="rtl"></h6>
 <pre>
-<span>cd $HOME && git clone https://github.com/amiralipor/amir.git && cd amir && chmod +x amir.sh && ./amir.sh install && ./amir.sh 
+<span>cd $HOME && git clone https://github.com/Telesuperior/amir.git && cd amir && chmod +x amir.sh && ./amir.sh install && ./amir.sh 
 </span>
 </pre>
 <hr>
