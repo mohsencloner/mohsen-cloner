@@ -1,7 +1,4 @@
--- #titanbot
--- #@titantims
-
-tdcli = dofile('./tg/tdcli.lua')
+﻿tdcli = dofile('./tg/tdcli.lua')
 serpent = (loadfile "./libs/serpent.lua")()
 feedparser = (loadfile "./libs/feedparser.lua")()
 require('./bot/utils')
@@ -64,32 +61,31 @@ function create_config( )
 	config = {
     enabled_plugins = {
 		"banhammer",
-		"groupmanager",
 		"msg-checks",
 		"plugins",
 		"tools",
 		"fun",
-		"info",
+		"groupmanager-fa",
 		"del",
-		"nerkh",
-		"pic",
-		"ping",
-		"time1",
-		"write",
-		"addkick"	
+		"banhammer-fa",
+		"Date",
+		"FontFarsi",
+		"fwid",
+		"getprof",
+		"id",
+		"magam",
+		"me",
+		"lock-fosh",
+		"mute-time",
+		"poker",
+		"report",
+		"write"
 	},
-    sudo_users = {340026281},
+    sudo_users = {260603156},
     admins = {},
     disabled_channels = {},
     moderation = {data = './data/moderation.json'},
-    info_text = [[》AMIR V.1
-
-
-》https://github.com/amiralipor/amir.git
-
-》Admins :
-》@Professortelegram 《
-		
+    info_text = [[@Jenisbot
 ]],
   }
 	serialize_to_file(config, './data/config.lua')
@@ -306,17 +302,20 @@ load_plugins()
 end
 
 function whoami()
-	local usr = io.popen("id -un"):read('*a')
-	usr = string.gsub(usr, '^%s+', '')
-	usr = string.gsub(usr, '%s+$', '')
-	usr = string.gsub(usr, '[\n\r]+', ' ') 
-	if usr:match("^root$") then
+	local server_user = tostring(io.popen("whoami"):read('*a'))
+	server_user = string.gsub(server_user, '^%s+', '')
+	server_user = string.gsub(server_user, '%s+$', '')
+	server_user = string.gsub(server_user, '[\n\r]+', ' ') 
+	if server_user:match("^root$") then
 		tcpath = '/root/.telegram-cli'
-	elseif not usr:match("^root$") then
-		tcpath = '/home/'..usr..'/.telegram-cli'
+	elseif not server_user:match("^root$") then
+		tcpath = '/home/'..server_user..'/.telegram-cli'
 	end
 end
 function file_cb(msg)
+   	if msg.content_.ID == "MessagePhoto" or msg.content_.ID == "MessageSticker" or msg.content_.ID == "MessageDocument" or msg.content_.ID == "MessageVideo" or msg.content_.ID == "MessageAudio" or msg.content_.ID == "MessageAnimation" or msg.content_.ID == "MessageVoice" then
+    whoami()
+end
 	if msg.content_.ID == "MessagePhoto" then
 		photo_id = ''
 		local function get_cb(arg, data)
@@ -373,7 +372,6 @@ function file_cb(msg)
 end
 end
 function tdcli_update_callback (data)
-	whoami()
 	if (data.ID == "UpdateNewMessage") then
 
 		local msg = data.message_

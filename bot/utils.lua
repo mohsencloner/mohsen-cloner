@@ -1,4 +1,4 @@
---Begin Utils.lua  @titantims :)
+﻿--Begin Utils.lua By #BeyondTeam :)
 function serialize_to_file(data, file, uglify)
   file = io.open(file, 'w+')
   local serialized
@@ -258,7 +258,7 @@ end
 function check_markdown(text) --markdown escape ( when you need to escape markdown , use it like : check_markdown('your text')
 		str = text
 		if str:match('_') then
-			output = str:gsub('_',[[\_]])
+			output = str:gsub('_','\\_')
 		elseif str:match('*') then
 			output = str:gsub('*','\\*')
 		elseif str:match('`') then
@@ -545,7 +545,7 @@ local lang = redis:get(hash)
   if not lang then
     return '_Group is not added_'
 else
-    return 'گروه به لیست گروه های مدیریتی ربات اضافه نشده است'
+    return 'ربات در گروه فعال نشده است 😐❤️'
    end
   end
   -- determine if table is empty
@@ -553,16 +553,16 @@ else
      if not lang then
 					return "_No_ *banned* _users in this group_"
    else
-					return "*هیچ کاربری از این گروه محروم نشده*"
+					return "*لیست کاربران مسدود شده از گروه خالی است 😐❤️*"
               end
 				end
        if not lang then
    message = '*List of banned users :*\n'
          else
-   message = '_لیست کاربران محروم شده از گروه :_\n'
+   message = '_کاربران محروم شده از گروه 😐❤️_\n\n'
      end
   for k,v in pairs(data[tostring(chat_id)]['banned']) do
-    message = message ..i.. '- '..check_markdown(v)..' [' ..k.. '] \n'
+    message = message ..i.. '- '..v..' [' ..k.. '] \n'
    i = i + 1
 end
   return message
@@ -577,7 +577,7 @@ local lang = redis:get(hash)
   if not lang then
     return '_Group is not added_'
 else
-    return 'گروه به لیست گروه های مدیریتی ربات اضافه نشده است'
+    return 'ربات در گروه فعال نشده است 😐❤️'
    end
   end
   -- determine if table is empty
@@ -585,16 +585,16 @@ else
         if not lang then
 					return "_No_ *silent* _users in this group_"
    else
-					return "*لیست کاربران سایلنت شده خالی است*"
+					return "*لیست سکوت خالی است 😐❤️*"
              end
 				end
       if not lang then
    message = '*List of silent users :*\n'
        else
-   message = '_لیست کاربران سایلنت شده :_\n'
+   message = '_کاربران ساکت شده در گروه 😐❤️_\n'
     end
   for k,v in pairs(data[tostring(chat_id)]['is_silent_users']) do
-    message = message ..i.. '- '..check_markdown(v)..' [' ..k.. '] \n'
+    message = message ..i.. '- '..v..' [' ..k.. '] \n'
    i = i + 1
 end
   return message
@@ -613,16 +613,16 @@ local lang = redis:get(hash)
     if not lang then
 					return "_No_ *globally banned* _users available_"
    else
-					return "*هیچ کاربری از گروه های ربات محروم نشده*"
+					return "*لیست کاربران مسدود سازی شده خالی است 😐❤️*"
              end
 				end
         if not lang then
    message = '*List of globally banned users :*\n'
    else
-   message = '_لیست کاربران محروم شده از گروه های ربات :_\n'
+   message = '_کاربران مسدودسازی شده در گروه 😐❤️_\n'
    end
   for k,v in pairs(data['gban_users']) do
-    message = message ..i.. '- '..check_markdown(v)..' [' ..k.. '] \n'
+    message = message ..i.. '- '..v..' [' ..k.. '] \n'
    i = i + 1
 end
   return message
@@ -640,7 +640,7 @@ local lang = redis:get(hash)
   if not lang then
     return '_Group is not added_'
 else
-    return 'گروه به لیست گروه های مدیریتی ربات اضافه نشده است'
+    return 'ربات در گروه فعال نشده است 😐❤️'
    end
   end
   -- determine if table is empty
@@ -648,7 +648,7 @@ else
       if not lang then
     return "*Filtered words list* _is empty_"
       else
-    return "_لیست کلمات فیلتر شده خالی است_"
+    return "_لیست کلمات فیلتر شده خالی است 😐❤️_"
      end
   end
   if not data[tostring(msg.chat_id_)]['filterlist'] then
@@ -658,11 +658,11 @@ else
       if not lang then
        filterlist = '*List of filtered words :*\n'
          else
-       filterlist = '_لیست کلمات فیلتر شده :_\n'
+       filterlist = '_کلمات فیلتر شده در گروه 😐❤️_\n'
     end
  local i = 1
    for k,v in pairs(data[tostring(msg.chat_id_)]['filterlist']) do
-              filterlist = filterlist..'*'..i..'* - _'..check_markdown(k)..'_\n'
+              filterlist = filterlist..'*'..i..'* - _'..k..'_\n'
              i = i + 1
          end
      return filterlist
