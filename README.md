@@ -72,7 +72,7 @@ screen ./auto.sh
 
 اموزش های بیش تر در کانال
 
-# [AMIR](https://telegram.me/Professortelegram)
+# [AMIR](https://telegram.me/Marde_Majazi_4)
 
 
 ###  Telegram channel:
