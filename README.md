@@ -3,7 +3,7 @@
     <a href="https://telegram.me/TeM_AMIR">
         <img src="http://upir.ir/951/guest/Untitled-7.png" hspace="10" width="150">
     </a>
-    <a href="https://telegram.me/Professortelegram">
+    <a href="https://telegram.me/Marde_Majazi_4">
         <img src="http://upir.ir/951/guest/Untitled-6.png" width="150">
     </a>
 </div>
