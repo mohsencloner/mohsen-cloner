@@ -34,6 +34,7 @@
 <span>cd amir</span>
 <span>chmod +x amir.sh</span>
 <span>./amir.sh install</span>
+<span>./amir.sh</span>
 </pre>
 <h4 dir="rtl">نصب ربات(روش دوم)
 <br></h4>
