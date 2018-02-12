@@ -1604,7 +1604,7 @@ local settings = data[tostring(target)]["settings"]
 .."➖➖➖➖➖➖➖➖➖\n\n"
 .."● #زبان   => فارسی\n\n"
 .."➖➖➖➖➖➖➖➖➖\n\n"
-.."● #ارتباط با سازنده  =>   @MardeMajazi"
+.."● #ارتباط با سازنده  =>   @ertejahi"
 end
 if not lang then
 text = string.gsub(text, "yes", "| ✔️ |")
