@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cd $HOME/amir.ir
+cd $HOME/mohsen.ir
 
 install() {
 	    cd tg
