@@ -23,12 +23,12 @@ do local _ = {
     "write",
     "autodelcache"
   },
-  info_text = "@Marde_Majazi_4\n",
+  info_text = "@cloberchanel\n",
   moderation = {
     data = "./data/moderation.json"
   },
   sudo_users = {
-    203561736
+    262992999
     
   }
 }
